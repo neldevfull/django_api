@@ -1,3 +1,4 @@
+```shell
       _     _                                                     _
    __| |   (_)   __ _   _ __     __ _    ___       __ _   _ __   (_)
   / _` |   | |  / _` | | '_ \   / _` |  / _ \     / _` | | '_ \  | |
@@ -5,6 +6,7 @@
   \__,_|  _/ |  \__,_| |_| |_|  \__, |  \___/     \__,_| | .__/  |_|
          |__/                   |___/                    |_|
 
+```
 ### Evidenced by a step by step the flexibility and potential of framework for the development of APIs
 
 * Python version: 3.5.0
