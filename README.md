@@ -1,10 +1,12 @@
 ```shell
-      _     _                                                     _
-   __| |   (_)   __ _   _ __     __ _    ___       __ _   _ __   (_)
-  / _` |   | |  / _` | | '_ \   / _` |  / _ \     / _` | | '_ \  | |
- | (_| |   | | | (_| | | | | | | (_| | | (_) |   | (_| | | |_) | | |
-  \__,_|  _/ |  \__,_| |_| |_|  \__, |  \___/     \__,_| | .__/  |_|
-         |__/                   |___/                    |_|
+     _    _                                                    _
+    | |  (_)                                                  (_)
+  __| |   _   __ _  _ __    __ _   ___            __ _  _ __   _
+ / _` |  | | / _` || '_ \  / _` | / _ \          / _` || '_ \ | |
+| (_| |  | || (_| || | | || (_| || (_) |        | (_| || |_) || |
+ \__,_|  | | \__,_||_| |_| \__, | \___/          \__,_|| .__/ |_|
+        _/ |                __/ |        ______        | |
+       |__/                |___/        |______|       |_|
 
 ```
 ### Evidenced by a step by step the flexibility and potential of framework for the development of APIs
@@ -56,6 +58,16 @@ git clone git@github.com:neldevfull/django_api.git
 
 ## Step one
 In step one, you have to create a minimum viable project done in Django, the files are in the directory 'stepone' and they can be used as templates for your new project django API
+
+* Create environment variables
+
+```shell
+export DEBUG=off
+```
+
+```shell
+export ALLOWED_HOSTS=localhost
+```
 
 * To run the project installs the dependencies and run the server
 
