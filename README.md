@@ -1,21 +1,19 @@
 ```shell
-     _    _                                                    _
-    | |  (_)                                                  (_)
-  __| |   _   __ _  _ __    __ _   ___            __ _  _ __   _
- / _` |  | | / _` || '_ \  / _` | / _ \          / _` || '_ \ | |
-| (_| |  | || (_| || | | || (_| || (_) |        | (_| || |_) || |
- \__,_|  | | \__,_||_| |_| \__, | \___/          \__,_|| .__/ |_|
-        _/ |                __/ |        ______        | |
-       |__/                |___/        |______|       |_|
+       __  _                                                       __  _       __
+  ____/ / (_)___ _____  ____ _____      ___  _____________  ____  / /_(_)___ _/ /
+ / __  / / / __ `/ __ \/ __ `/ __ \    / _ \/ ___/ ___/ _ \/ __ \/ __/ / __ `/ /
+/ /_/ / / / /_/ / / / / /_/ / /_/ /   /  __(__  |__  )  __/ / / / /_/ / /_/ / /
+\__,_/_/ /\__,_/_/ /_/\__, /\____/____\___/____/____/\___/_/ /_/\__/_/\__,_/_/
+    /___/            /____/     /_____/
 
 ```
-### Evidenced by a step by step the flexibility and potential of framework for the development of APIs
+### proved by a step by step the potential and flexibility of the framework for developing web applications and APIs
 
 * Python version: 3.5.0
 * Django: 1.9
 * Environment: GNU/Linux
 
-## The project is divided into six steps
+## The project is divided into none steps
 
 ### Step Zero or prepare to walk
 
