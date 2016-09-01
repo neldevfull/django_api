@@ -7,6 +7,8 @@ from io import BytesIO
 from PIL import Image, ImageDraw
 from django.core.cache import cache
 from django.views.decorators.http import etag
+from django.shortcuts import render
+from django.core.urlresolvers import reverse
 
 
 class ImageForm(forms.Form):
@@ -54,7 +56,12 @@ def placeholder(request, width, height):
     return HttpResponse(form.generate(), content_type='image/png')
 
 def index(request):
-    return HttpResponse('Hey friend!')
+    example = reverse('placeholder', kwargs={'width': 50, 'height': 50})
+    print(example)
+    context = {
+        'example': request.build_absolute_uri(example)
+    }
+    return render(request, 'home.html', context)
 
 # URLs
 urlpatterns = (
