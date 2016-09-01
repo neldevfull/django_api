@@ -15,48 +15,46 @@
 * Django: 1.9
 * Environment: GNU/Linux
 
-#### The project is divided into six steps
+## The project is divided into six steps
 
-## Step Zero or prepare to walk
+### Step Zero or prepare to walk
 
-### Install project dependencies
+#### Install project dependencies
 ```shell
 sudo apt-get install -y make build-essential libssl-dev libbz2-dev libreadline-dev libsqlite3-dev wget llvm libncurses5-dev
 ```
 
-### Install pyenv
+#### Install pyenv
 ```shell
 curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
 ```
 
-### Put these lines on your $HOME/.bashrc (similar file depending on your distribution)
+#### Put these lines on your $HOME/.bashrc (similar file depending on your distribution)
 ```shell
 export PATH="/home/vagrant/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 ```
 
-### Persist your changes
+#### Persist your changes
 ```shell
 source ~/.bashrc
 ```
-### Install version 3.5.0
+#### Install version 3.5.0
 ```shell
 pyenv install 3.5.0
 ```
-### Version 3.5.0 to set as global
+#### Version 3.5.0 to set as global
 ```shell
 pyenv global 3.5.0
 ```
 
-## To begin we will clone the project
+#### To begin we will clone the project
 ```shell
 git clone git@github.com:neldevfull/django_api.git
 ```
 
-### Step by step
-
-## Step one
+### Step one
 In step one, you have to create a minimum viable project done in Django, the files are in the directory 'stepone' and they can be used as templates for your new project django API
 
 * Create environment variables
@@ -86,3 +84,18 @@ gunicorn manage
 ```shell
 django-admin.py startproject foo --template=stepone
 ```
+
+### Step two
+In step two, it was included logic to create the rendering of an image according to the parameters passed in the URL, as was also developed the static part of the application, homepage
+
+* Installs new dependencies
+
+```shell
+cd ../steptwo
+```
+```shell
+pip install -r requirements
+```
+Obs: See the Pillow library was installed
+
+You can access the project using your favorite browser and play with imaging
