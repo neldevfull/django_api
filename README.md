@@ -55,17 +55,21 @@ git clone git@github.com:neldevfull/django_api.git
 ### Step one
 In step one, you have to create a minimum viable project done in Django, the files are in the directory 'stepone' and they can be used as templates for your new project django API
 
-* Create environment variables
+* Create environment variables, open your file .bashrc or similar and write
 
 ```shell
-export DEBUG=off
-```
-
-```shell
+export DEBUG=on
 export ALLOWED_HOSTS=localhost
+export SECRET_KEY=[your_secret_key]
 ```
 
-* To run the project installs the dependencies and run the server
+#### Persist your changes
+
+```shell
+source ~/.bashrc
+```
+
+#### To run the project installs the dependencies and run the server
 
 ```shell
 cd stepone
@@ -84,9 +88,9 @@ django-admin.py startproject foo --template=stepone
 ```
 
 ### Step two
-In step two, it was included logic to create the rendering of an image according to the parameters passed in the URL, as was also developed the static part of the application, homepage
+In step two, it was included logic to create the rendering of an image according to the parameters passed in the URL, as was also developed the static part of the application, homepage. The step two was createad from the template stepone
 
-* Installs new dependencies
+#### Installs new dependencies
 
 ```shell
 cd ../steptwo
@@ -96,4 +100,4 @@ pip install -r requirements
 ```
 Obs: See the Pillow library was installed
 
-You can access the project using your favorite browser and play with imaging
+* You can access the project using your favorite browser and play with imaging
