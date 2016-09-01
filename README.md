@@ -13,7 +13,7 @@
 * Django: 1.9
 * Environment: GNU/Linux
 
-## The project is divided into none steps
+## The project is divided into nine steps
 
 ### Step Zero or prepare to walk
 
