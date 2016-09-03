@@ -8,7 +8,7 @@ User = get_user_model()
 
 
 class SprintSerializer(serializers.ModelSerializer):
-    links = serializers.SerializerMethodField('get_links')
+    links = serializers.SerializerMethodField()
 
     class Meta:
         model = Sprint
@@ -23,11 +23,11 @@ class SprintSerializer(serializers.ModelSerializer):
 
 
 class TaskSerializer(serializers.ModelSerializer):
-    links = serializers.SerializerMethodField('get_links')
+    links = serializers.SerializerMethodField()
     assigned = serializers.SlugRelatedField(
         slug_field=User.USERNAME_FIELD, required=False, allow_null=True,
         queryset=User.objects.all())
-    status_display = serializers.SerializerMethodField('get_status_display')
+    status_display = serializers.SerializerMethodField()
 
     class Meta:
         model = Task
@@ -59,7 +59,7 @@ class TaskSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    links = serializers.SerializerMethodField('get_links')
+    links = serializers.SerializerMethodField()
     full_name = serializers.CharField(source='get_full_name', read_only=True)
 
     class Meta:
@@ -71,5 +71,5 @@ class UserSerializer(serializers.ModelSerializer):
         username = obj.get_username()
         return {
             'self': reverse('user-detail',
-                kwargs={USER.USERNAME_FIELD: username}, request=request)
+                kwargs={User.USERNAME_FIELD: username}, request=request)
         }

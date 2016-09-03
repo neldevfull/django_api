@@ -8,14 +8,14 @@ User = get_user_model()
 
 
 class DefaultsMixin(object):
-    """Settigns default for authentication, permissions, filters and pagination"""
+    """Default settigns for authentication, permissions, filters and pagination"""
 
     authentication_classes = (
         authentication.BasicAuthentication,
         authentication.TokenAuthentication,
     )
 
-    permission_class = (
+    permission_classes = (
         permissions.IsAuthenticated,
     )
 
