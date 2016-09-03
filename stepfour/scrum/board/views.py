@@ -1,9 +1,14 @@
+from django.contrib.auth import get_user_model
 from rest_framework import authentication, permissions, viewsets
-from .serializers import SprintSerializer
+from .models import Strint, Task
+from .serializers import SprintSerializer, TaskSerializer, UserSerializer
+
+
+User = get_user_model()
 
 
 class DefaultsMixin(object):
-    """Settigns default for authentication and permissions, filter and pagination"""
+    """Settigns default for authentication, permissions, filters and pagination"""
 
     authentication_classes = (
         authentication.BasicAuthentication,
@@ -24,3 +29,19 @@ class SprintViewSet(DefaultsMixin, viewsets.ModelViewSet):
 
     queryset = Sprint.objects.order_by('end')
     serializer_class = SprintSerializer
+
+
+class TaskViewSet(DefaultsMixin, viewsets.ModelViewSet):
+    """API endpoint for list and create tasks"""
+
+    queryset = Task,object.all()
+    serializer_class = TaskSerializer
+
+
+class UserViewSet(DefaultsMixin, viewsets.ReadOnlyModelViewSet):
+    """API endpoint for list users"""
+
+    lookup_field = User.USERNAME_FIELD
+    lookup_url_kwarg = User.USERNAME_FIELD
+    queryset = User.objects.order_by(User.USERNAME_FIELD)
+    serializer_class = UserSerializer
