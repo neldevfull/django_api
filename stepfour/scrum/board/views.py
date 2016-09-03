@@ -1,6 +1,6 @@
 from django.contrib.auth import get_user_model
-from rest_framework import authentication, permissions, viewsets
-from .models import Strint, Task
+from rest_framework import authentication, permissions, viewsets, filters
+from .models import Sprint, Task
 from .serializers import SprintSerializer, TaskSerializer, UserSerializer
 
 
@@ -16,7 +16,7 @@ class DefaultsMixin(object):
     )
 
     permission_class = (
-        permissions.isAuthenticated,
+        permissions.IsAuthenticated,
     )
 
     paginate_by = 50
@@ -34,7 +34,7 @@ class SprintViewSet(DefaultsMixin, viewsets.ModelViewSet):
 class TaskViewSet(DefaultsMixin, viewsets.ModelViewSet):
     """API endpoint for list and create tasks"""
 
-    queryset = Task,object.all()
+    queryset = Task.objects.all()
     serializer_class = TaskSerializer
 
 
