@@ -38,7 +38,7 @@ class SprintViewSet(DefaultsMixin, viewsets.ModelViewSet):
 
     queryset = Sprint.objects.order_by('end')
     serializer_class = SprintSerializer
-    search_filter = ('name', )
+    search_fields = ('name', )
     ordering_fields = ('end', 'name', )
 
 
@@ -48,7 +48,7 @@ class TaskViewSet(DefaultsMixin, viewsets.ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
     filter_class = TaskFilter
-    search_filter = ('name', 'description', )
+    search_fields = ('name', 'description', )
     ordering_fields = ('name', 'order', 'starded', 'due', 'completed', )
 
 
