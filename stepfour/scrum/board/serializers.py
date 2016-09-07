@@ -15,10 +15,13 @@ class SprintSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'description', 'end', 'links', )
 
     def get_links(self, obj):
+        """Links to filtering relationship"""
         request = self.context['request']
         return {
             'self': reverse('sprint-detail',
-                kwargs={'pk': obj.pk}, request=request)
+                kwargs={'pk': obj.pk}, request=request),
+            'tasks': reverse('task-list',
+                request=request) + '?sprint={}'.format(obj.pk),
         }
 
 
@@ -67,9 +70,12 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('id', User.USERNAME_FIELD, 'full_name', 'is_active', 'links', )
 
     def get_links(self, obj):
+        """Links to filtering relationship"""
         request = self.context['request']
         username = obj.get_username()
         return {
             'self': reverse('user-detail',
-                kwargs={User.USERNAME_FIELD: username}, request=request)
+                kwargs={User.USERNAME_FIELD: username}, request=request),
+            'tasks': '{}?assigned={}'.format(
+                reverse('task-list', request=request), username)
         }
