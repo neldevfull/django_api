@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     # Other applications
     'rest_framework',
     'rest_framework.authtoken',
+    'django_filters',
     # We applications
     'board',
 ]
