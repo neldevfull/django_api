@@ -1,0 +1,24 @@
+# CLI Django SQL
+
+# shell
+manage dbshell
+
+# Inspect
+manage inspectdb
+
+# See sql of migration
+manage sqlmigrate [model] [number] | example: manage sqlmigrate subscription 0001
+
+# Check what will be deleted
+manage sqlflush
+
+# Delete all data
+manage flush
+
+# Load data
+manage loaddata
+
+# Check sequence
+manage sqlsequencereset
+
+
