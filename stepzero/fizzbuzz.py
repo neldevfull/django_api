@@ -12,17 +12,23 @@ Regras
 """
 
 
+multiple_of = lambda base, num: num % base == 0
+
+
 def robot(pos):
     fizz = 3
     buzz = 5
+    result = str(pos)
 
-    if pos % fizz == 0:
-        return 'fizz'
+    if (multiple_of(fizz, pos) and
+            multiple_of(buzz, pos)):
+        result = 'fizzbuzz'
+    elif multiple_of(fizz, pos):
+        result = 'fizz'
+    elif multiple_of(buzz, pos):
+        result = 'buzz'
 
-    if pos % buzz == 0:
-        return 'buzz'
-
-    return str(pos)
+    return result
 
 
 def main():
@@ -37,6 +43,10 @@ def main():
     assert robot(5) == 'buzz'
     assert robot(10) == 'buzz'
     assert robot(20) == 'buzz'
+
+    assert robot(15) == 'fizzbuzz'
+    assert robot(30) == 'fizzbuzz'
+    assert robot(45) == 'fizzbuzz'
 
 
 if __name__ == '__main__':
