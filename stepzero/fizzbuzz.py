@@ -13,11 +13,14 @@ Regras
 
 
 def robot(pos):
-    if pos in (5, 10, 20):
-        return 'buzz'
+    fizz = 3
+    buzz = 5
 
-    if pos in (9, 6, 3):
+    if pos % fizz == 0:
         return 'fizz'
+
+    if pos % buzz == 0:
+        return 'buzz'
 
     return str(pos)
 
