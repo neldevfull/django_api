@@ -63,6 +63,19 @@ export ALLOWED_HOSTS=localhost
 export SECRET_KEY=[your_secret_key]
 ```
 
+#### Install VirtualenvWrapper
+```shell
+pip install virtualenvwrapper
+```
+
+* Create environment variables, open your file .bashrc or similar and write
+
+```shell
+export VIRTUALENVWRAPPER_PYTHON=$HOME/.pyenv/versions/3.5.2/bin/python3
+export WORKON_HOME=$HOME/.envs
+source $HOME/.pyenv/versions/3.5.2/bin/virtualenvwrapper.sh
+```
+
 #### Persist your changes
 
 ```shell
